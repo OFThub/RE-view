@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Müzik Platformu</title>
+  <link rel="stylesheet" href="css/body.css">
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/navbar.css">
+</head>
+<body>
+  <header class="top-navbar">
+    <div class="logo">RE:view</div>
+  </header>
+  <div class="container">
+    <nav class="navbar">
+      <div class="nav-links">
+        <a href="index.html">Ana Sayfa</a>
+        <a href="html/explore.html">Film Keşfet</a>
+        <a href="html/actor.html">Aktör Keşfet</a>
+        <a href="html/director.html">Yönetmen Keşfet</a>
+        <a href="html/library.html">Favoriler</a>
+        <a href="html/profile.html">Profil</a>
+        <a href="html/giris.html">Giriş Yap</a>
+        <a href="html/kayit.html">Kaydol</a>
+      </div>
+    </nav>
+
+    <div class="content">
+      <section id="hero" class="hero">
+        <div class="hero-content">
+          <h1>RE:view</h1>    
+          <div id="userCount">Yükleniyor...</div>
+      
+          <script>
+              // PHP betiğini çağır
+              fetch('php/userCount.php')
+                  .then(response => response.json())
+                  .then(data => {
+                      if (data.status === "success") {
+                          document.getElementById('userCount').innerText = data.user_count;
+                      } else {
+                          document.getElementById('userCount').innerText = "Hata: " + data.message;
+                      }
+                  })
+                  .catch(error => {
+                      document.getElementById('userCount').innerText = "Bir hata oluştu: " + error;
+                  });
+          </script>
+
+          <p>Kullanıcıyla beraber izlediğiniz filmleri eleştirin,beğenin,fikirlerinizi paylaşın...</p>
+          <button class="cta-btn" onclick="window.location.href='html/explore.html'">Keşfetmeye Başla</button>
+        </div>
+      </section>
+
+
+
+    </div>
+  </div>
+</body>
+</html>

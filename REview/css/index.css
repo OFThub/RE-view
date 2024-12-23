@@ -1,0 +1,39 @@
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+  }
+  
+  .hero-content {
+    max-width: 50%;
+  }
+  
+  .hero-content h1 {
+    font-size: 3rem;
+    color: red;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+  }
+  
+  .cta-btn {
+    padding: 15px 30px;
+    background-color: red;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .cta-btn:hover {
+    background-color: #e04d3d;
+  }
+  
+  .hero-image {
+    max-width: 40%;
+    border-radius: 15px;
+  }

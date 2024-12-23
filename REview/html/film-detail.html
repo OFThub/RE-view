@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Müzik Platformu</title>
+  <link rel="stylesheet" href="../css/body.css">
+  <link rel="stylesheet" href="../css/film-detail.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/movie_review.css">
+</head>
+<body>
+    <header class="top-navbar">
+        <div class="logo">RE:view</div>
+    </header>
+
+    <header class="navbar">
+        <nav class="nav-links">
+        <a href="../index.html">Ana Sayfa</a> 
+        <a href="explore.html">Film Keşfet</a>  
+        <a href="actor.html">Aktör Keşfet</a>
+        <a href="director.html">Yönetmen Keşfet</a>
+        <a href="library.html">Favoriler</a> 
+        <a href="profile.html">Profil</a>  
+        <a href="giris.html">Giriş Yap</a>
+        <a href="kayit.html">Kaydol</a>
+        </nav>
+  </header>
+
+  
+
+  <section id="movie-detail">
+    <div id="movie-container">
+      <form action="../php/review.php" method="post">
+          <img id="movie-poster" src="" alt="Film Poster">
+          <h2 id="movie-title"></h2>
+          <input type="hidden" name="title" id="hidden-title">
+          <input type="hidden" name="overview" id="hidden-overview">
+          <p id="movie-release-date"></p>
+          <p id="movie-rating"></p>
+          <p id="movie-description"></p>
+
+          <h1 style="text-align: center;">Yorumlar</h1>
+          <div class="container" id="reviewContainer">
+            <!-- Film kartları buraya eklenecek -->
+          </div>
+          
+          <div id="favorites">Yükleniyor...</div>
+      
+          <script>
+
+          </script>
+
+          <h3>Yorum Yap</h3>
+          <textarea id="comment-text" name="review"placeholder="Yorumunuzu buraya yazın..."></textarea>
+          
+          <div id="rating">
+            <label><input type="radio" name="rating" value="1"> 1</label>
+            <label><input type="radio" name="rating" value="2"> 2</label>
+            <label><input type="radio" name="rating" value="3"> 3</label>
+            <label><input type="radio" name="rating" value="4"> 4</label>
+            <label><input type="radio" name="rating" value="5"> 5</label>
+            <label><input type="radio" name="rating" value="6"> 6</label>
+            <label><input type="radio" name="rating" value="7"> 7</label>
+            <label><input type="radio" name="rating" value="8"> 8</label>
+            <label><input type="radio" name="rating" value="9"> 9</label>
+            <label><input type="radio" name="rating" value="10"> 10</label>
+          </div>
+          
+          
+          <button id="submit-comment">Yorumu Gönder</button>
+      </form>
+
+
+
+      <form action="../php/favorite.php" method="post">
+        <input type="hidden" name="title" id="hidden-title-">
+        <input type="hidden" name="rating" id="hidden-rating">
+
+        <h3>Favoriler</h3>
+        <button id="add-to-favorites">Favorilere Ekle</button>
+      </form>
+
+      <form action="../php/removefavorite.php" method="post">
+        <input type="hidden" name="title" id="hidden-title--">
+        <input type="hidden" name="rating" id="hidden-rating-">
+        <button id="remove-from-favorites">Favorilerden Çıkar</button>
+      </form>
+
+      <form action="../php/watchList.php" method="post">
+        <input type="hidden" name="title" id="hidden-title---">
+        <input type="hidden" name="rating" id="hidden-rating--">
+        <h3>İzlenecekler Listesi</h3>
+        <button id="remove-from-favorites">İzlenecekler Listesine Ekle</button>
+      </form>
+
+      <form action="../php/removeWatchList.php" method="post">
+        <input type="hidden" name="title" id="hidden-title----">
+        <input type="hidden" name="rating" id="hidden-rating---">
+        <button id="remove-from-favorites">İzlenecekler Listesinden Çıkar</button>
+      </form>
+    </div>
+  </section>
+
+  <script src="../js/film-detail.js"></script>
+</body>
+</html>

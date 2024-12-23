@@ -1,0 +1,17 @@
+/* Yorum kartlarını alt alta göstermek için */
+.card {
+    display: block; /* Kartları alt alta sıralar */
+    margin-bottom: 20px; /* Kartlar arasında mesafe bırakır */
+    padding: 15px; /* Kart içine biraz boşluk ekler */
+    border: 1px solid #4e4e4e; /* Kartların etrafına bir kenarlık ekler */
+    border-radius: 8px; /* Kenarlara yuvarlaklık ekler */
+    background-color: #424242; /* Arka plan rengini açık tutar */
+}
+
+.card h3 {
+    margin: 0 0 10px 0; /* Başlık ile içerik arasına mesafe ekler */
+}
+
+.card p {
+    margin: 5px 0; /* Paragraflar arasında mesafe bırakır */
+}

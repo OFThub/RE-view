@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Müzik Platformu</title>
+  <link rel="stylesheet" href="../css/body.css">
+  <link rel="stylesheet" href="../css/explore.css">
+  <link rel="stylesheet" href="../css/navbar.css">
+  <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+    <header class="top-navbar">
+        <div class="logo">RE:view</div>
+    </header>
+
+    <header class="navbar">
+        <nav class="nav-links">
+        <a href="../index.html">Ana Sayfa</a>  
+        <a href="explore.html">Film Keşfet</a>  
+        <a href="actor.html">Aktör Keşfet</a>
+        <a href="director.html">Yönetmen Keşfet</a>
+        <a href="library.html">Favoriler</a>   
+        <a href="profile.html">Profil</a>  
+        <a href="giris.html">Giriş Yap</a>
+        <a href="kayit.html">Kaydol</a>
+        </nav>
+    </header>
+
+    <div class="auth-container" id="auth-container">
+      <div id="login-form" >
+        <h2>Giriş Yap</h2>
+        <form action="../php/login.php" method="post">
+          <label for="login-email">E-posta</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="login-password">Şifre</label>
+          <input type="password" id="password" name="password" required>
+  
+          <button type="submit">Giriş Yap</button>
+        </form>
+        <p class="toggle-link">Hesabınız yok mu? <a href="#" onclick="showRegisterForm()">Kayıt Ol</a></p>
+      </div>
+  
+      <div id="register-form" style="display: none;" >
+        <h2>Kayıt Ol</h2>
+        <form action="../php/submit.php" method="post">
+          <label for="register-name">Ad</label>
+          <input type="text" id="name" name="name" required>
+  
+          <label for="register-email">E-posta</label>
+          <input type="email" id="email" name="email" required>
+  
+          <label for="register-password">Şifre</label>
+          <input type="password" id="password" name="password" required>
+  
+          <button type="submit">Kayıt Ol</button>
+        </form>
+        <p class="toggle-link">Zaten hesabınız var mı? <a href="#" onclick="showLoginForm()">Giriş Yap</a></p>
+      </div>
+    </div>
+  
+    <script src="../js/login.js"></script>
+  </body>
+</html>

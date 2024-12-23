@@ -1,0 +1,66 @@
+.auth-container {
+    width: 100%;
+    max-width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative; /* Pozisyonlandırma etkisi yalnızca bu element için geçerli olacak */
+    top: 150px; /* Yukarıdan 150px aşağı taşı */
+    margin: 0 auto; /* Yatayda ortala */
+    }
+
+
+    .auth-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: red;
+    }
+
+    .auth-container form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .auth-container label {
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: red;
+    }
+
+    .auth-container input {
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+
+    .auth-container button {
+      padding: 10px;
+      background: red;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .auth-container button:hover {
+      background: red;
+    }
+
+    .auth-container .toggle-link {
+      text-align: center;
+      margin-top: 10px;
+      font-size: 14px;
+      color: red;
+    }
+
+    .auth-container .toggle-link a {
+      color: red;
+      text-decoration: none;
+    }
+
+    .auth-container .toggle-link a:hover {
+      text-decoration: underline;
+    }
